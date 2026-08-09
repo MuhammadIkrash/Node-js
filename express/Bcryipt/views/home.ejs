@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/">Authentication App</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+      <div
+        class="row justify-content-center align-items-center"
+        style="min-height: 85vh"
+      >
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 rounded-4">
+            <div class="card-body text-center p-5">
+              <h1 class="display-4 fw-bold text-primary">
+                Welcome <%= user.name %> 👋
+              </h1>
+
+              <p class="lead text-muted mt-3">
+                This is a simple Authentication System built with
+                <strong>Node.js</strong>, <strong>Express.js</strong>,
+                <strong>MongoDB</strong>, <strong>Mongoose</strong>, and
+                <strong>bcrypt.js</strong>.
+              </p>
+            </div>
+          </div>
+          <a href="/logout" class="btn btn-dark mt-2">logout</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
