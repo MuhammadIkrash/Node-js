@@ -1,0 +1,33 @@
+:root {
+    --primary: #4F46E5;
+    --primary-hover: #4338CA;
+
+    --sidebar: #171A3A;
+
+    --background: #F8FAFC;
+    --card: #FFFFFF;
+
+    --text: #111827;
+    --text-secondary: #64748B;
+
+    --border: #E2E8F0;
+
+    --success: #22C55E;
+    --danger: #EF4444;
+    --warning: #F59E0B;
+
+    --male: #3B82F6;
+    --female: #EC4899;
+}
+
+.background{
+    background-color: var(--background);
+}
+
+.sidebar{
+    background-color: var(--sidebar);
+}
+.btnPrimary{
+    background-color: var(--primary);
+    color: #CBD5E1;
+}

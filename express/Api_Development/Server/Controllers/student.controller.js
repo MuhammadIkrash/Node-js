@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import StudentInfoSchema from "../Model/student.model.js"
 import fs from "fs"
 import path from "path";
-
 // Get All Student
 const getStudents = async (req, res) => {
     try {
@@ -57,6 +56,8 @@ const getSingleStudent = async (req, res) => {
 // Add Student
 const addStudent = async (req, res) => {
     try {
+        console.log("BODY:", req.body);
+        console.log("FILE:", req.file);
         const { first_name, last_name, email, phone, address, gender } = req.body
         if (!first_name || !last_name || !email || !phone || !address || !gender) {
             if (req.file) {
