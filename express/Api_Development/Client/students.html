@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students — Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="index.html"><div class="brand-icon">S</div><div><h1>Student Management</h1><span>Management Portal</span></div></a>
+  <div class="nav-title">Main Menu</div>
+  <nav class="nav">
+    <a href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+    <a class="active" href="students.html"><span class="nav-icon">♙</span>Students</a>
+    <a href="add-student.html"><span class="nav-icon">＋</span>Add Student</a>
+  </nav>
+  <div class="sidebar-bottom"><div class="profile-mini"><div class="avatar">MI</div><div><strong>Student Portal</strong><span>Management System</span></div></div></div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div class="breadcrumb"><strong>Students</strong> <span>/ All Students</span></div>
+  <div class="top-actions"><button class="icon-btn mobile-menu">☰</button><button class="icon-btn">♢</button><div class="avatar">MI</div></div>
+</header>
+
+<section class="page">
+  <div class="page-head">
+    <div><h2>Students</h2><p>View, search and manage all registered students.</p></div>
+    <div class="actions"><a href="add-student.html" class="btn btn-primary">＋ Add Student</a></div>
+  </div>
+
+  <section class="card">
+    <div class="toolbar">
+      <div class="search"><span>⌕</span><input type="search" placeholder="Search by name, email or phone"></div>
+      <div class="actions">
+        <select class="select"><option>All Gender</option><option>Male</option><option>Female</option></select>
+        <button class="btn btn-secondary">Filter</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>Student</th><th>Email</th><th>Phone</th><th>Address</th><th>Gender</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><div class="student-cell"><div class="student-avatar">AK</div><div class="student-name"><strong>Ahmed Khan</strong><span>#00128</span></div></div></td>
+            <td>ahmed@example.com</td><td>0300 1234567</td><td>Karachi, Pakistan</td><td><span class="badge badge-male">Male</span></td><td><span class="badge badge-success">Active</span></td>
+            <td><div class="row-actions"><button class="row-btn edit" title="Edit">✎</button><button class="row-btn delete" title="Delete">×</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="student-cell"><div class="student-avatar">SA</div><div class="student-name"><strong>Sara Ali</strong><span>#00127</span></div></div></td>
+            <td>sara@example.com</td><td>0311 7654321</td><td>Lahore, Pakistan</td><td><span class="badge badge-female">Female</span></td><td><span class="badge badge-success">Active</span></td>
+            <td><div class="row-actions"><button class="row-btn edit">✎</button><button class="row-btn delete">×</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="student-cell"><div class="student-avatar">HR</div><div class="student-name"><strong>Hamza Raza</strong><span>#00126</span></div></div></td>
+            <td>hamza@example.com</td><td>0322 4567890</td><td>Islamabad, Pakistan</td><td><span class="badge badge-male">Male</span></td><td><span class="badge badge-success">Active</span></td>
+            <td><div class="row-actions"><button class="row-btn edit">✎</button><button class="row-btn delete">×</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="student-cell"><div class="student-avatar">MA</div><div class="student-name"><strong>Maham Asif</strong><span>#00125</span></div></div></td>
+            <td>maham@example.com</td><td>0333 9876543</td><td>Karachi, Pakistan</td><td><span class="badge badge-female">Female</span></td><td><span class="badge badge-warning">Pending</span></td>
+            <td><div class="row-actions"><button class="row-btn edit">✎</button><button class="row-btn delete">×</button></div></td>
+          </tr>
+          <tr>
+            <td><div class="student-cell"><div class="student-avatar">UZ</div><div class="student-name"><strong>Usman Zahid</strong><span>#00124</span></div></div></td>
+            <td>usman@example.com</td><td>0344 2233445</td><td>Hyderabad, Pakistan</td><td><span class="badge badge-male">Male</span></td><td><span class="badge badge-success">Active</span></td>
+            <td><div class="row-actions"><button class="row-btn edit">✎</button><button class="row-btn delete">×</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination"><button class="page-btn" disabled>‹</button><button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><button class="page-btn">4</button><button class="page-btn">›</button></div>
+  </section>
+</section>
+</main>
+</div>
+</body>
+</html>

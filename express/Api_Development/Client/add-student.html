@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Student — Student Management</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="index.html"><div class="brand-icon">S</div><div><h1>Student Management</h1><span>Management Portal</span></div></a>
+  <div class="nav-title">Main Menu</div>
+  <nav class="nav">
+    <a href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+    <a href="students.html"><span class="nav-icon">♙</span>Students</a>
+    <a class="active" href="add-student.html"><span class="nav-icon">＋</span>Add Student</a>
+  </nav>
+  <div class="sidebar-bottom"><div class="profile-mini"><div class="avatar">MI</div><div><strong>Student Portal</strong><span>Management System</span></div></div></div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div class="breadcrumb"><strong>Add Student</strong> <span>/ Student Information</span></div>
+  <div class="top-actions"><button class="icon-btn mobile-menu">☰</button><button class="icon-btn">♢</button><div class="avatar">MI</div></div>
+</header>
+
+<section class="page">
+  <div class="page-head">
+    <div><h2>Add New Student</h2><p>Enter the student's information to create a new record.</p></div>
+    <a href="students.html" class="btn btn-secondary">← Back to Students</a>
+  </div>
+
+  <section class="card form-card">
+    <div class="card-head"><div><h3>Student Information</h3><span>All required fields are marked with *</span></div></div>
+    <div class="card-body">
+      <div class="notice notice-info">Student data will be submitted to your backend API. This page currently contains UI only.</div>
+
+      <form>
+        <div class="form-grid">
+          <div class="field">
+            <label class="label">First Name <span class="required">*</span></label>
+            <input class="input" type="text" name="first_name" placeholder="Enter first name" required>
+          </div>
+          <div class="field">
+            <label class="label">Last Name <span class="required">*</span></label>
+            <input class="input" type="text" name="last_name" placeholder="Enter last name" required>
+          </div>
+          <div class="field">
+            <label class="label">Email Address <span class="required">*</span></label>
+            <input class="input" type="email" name="email" placeholder="student@example.com" required>
+          </div>
+          <div class="field">
+            <label class="label">Phone Number <span class="required">*</span></label>
+            <input class="input" type="tel" name="phone" placeholder="03XX XXXXXXX" required>
+          </div>
+          <div class="field full">
+            <label class="label">Address <span class="required">*</span></label>
+            <textarea class="textarea" name="address" placeholder="Enter complete address" required></textarea>
+          </div>
+          <div class="field">
+            <label class="label">Gender <span class="required">*</span></label>
+            <select class="select" name="gender" style="width:100%" required>
+              <option value="">Select gender</option><option value="Male">Male</option><option value="Female">Female</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Profile Picture</label>
+            <div class="file-box">
+              <div class="upload-icon">⇧</div>
+              <p>Upload profile picture</p>
+              <small>PNG, JPG or JPEG • Max 3 MB</small>
+              <input type="file" name="Profile_Pic" accept="image/*">
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <a href="students.html" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-primary">Create Student</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</section>
+</main>
+</div>
+</body>
+</html>

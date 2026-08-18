@@ -1,27 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Play CDN</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="h-screen h-[100%] background">
-      <aside class="w-[18%] h-[100%] sidebar flex flex-col relative">
-        <div class="w-[100%] h-15 flex flex-col justify-center items-center border-b-2 border-b-[#2A2E50]">
-          <span class="text-[20px] font-semibold text-white">StudentHub</span>
-          <span class="text-[13px] text-[#94A3B8]">Student Management System</span>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management — Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="index.html">
+    <div class="brand-icon">S</div>
+    <div><h1>Student Management</h1><span>Management Portal</span></div>
+  </a>
+  <div class="nav-title">Main Menu</div>
+  <nav class="nav">
+    <a class="active" href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+    <a href="students.html"><span class="nav-icon">♙</span>Students</a>
+    <a href="add-student.html"><span class="nav-icon">＋</span>Add Student</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="profile-mini"><div class="avatar">MI</div><div><strong>Student Portal</strong><span>Management System</span></div></div>
+  </div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div class="breadcrumb"><strong>Dashboard</strong> <span>/ Overview</span></div>
+  <div class="top-actions">
+    <button class="icon-btn mobile-menu" aria-label="Menu">☰</button>
+    <button class="icon-btn" aria-label="Notifications">♢</button>
+    <div class="avatar">MI</div>
+  </div>
+</header>
+
+<section class="page">
+  <div class="page-head">
+    <div><h2>Dashboard Overview</h2><p>Monitor student records and manage your student information.</p></div>
+    <div class="actions"><a class="btn btn-primary" href="add-student.html">＋ Add Student</a></div>
+  </div>
+
+  <div class="stats">
+    <article class="card stat-card"><div><div class="stat-label">Total Students</div><div class="stat-number">128</div><div class="stat-change">↑ 12% this month</div></div><div class="stat-icon">♙</div></article>
+    <article class="card stat-card"><div><div class="stat-label">Male Students</div><div class="stat-number">76</div><div class="stat-change">59.4% of total</div></div><div class="stat-icon">♂</div></article>
+    <article class="card stat-card"><div><div class="stat-label">Female Students</div><div class="stat-number">52</div><div class="stat-change">40.6% of total</div></div><div class="stat-icon">♀</div></article>
+    <article class="card stat-card"><div><div class="stat-label">New This Month</div><div class="stat-number">18</div><div class="stat-change">↑ 6 new this week</div></div><div class="stat-icon">↗</div></article>
+  </div>
+
+  <div class="grid-2">
+    <section class="card">
+      <div class="card-head"><h3>Recent Students</h3><a href="students.html" class="btn btn-secondary btn-sm">View All</a></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Student</th><th>Email</th><th>Phone</th><th>Gender</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><div class="student-cell"><div class="student-avatar">AK</div><div class="student-name"><strong>Ahmed Khan</strong><span>Student #00128</span></div></div></td><td>ahmed@example.com</td><td>0300 1234567</td><td><span class="badge badge-male">Male</span></td><td><span class="badge badge-success">Active</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar">SA</div><div class="student-name"><strong>Sara Ali</strong><span>Student #00127</span></div></div></td><td>sara@example.com</td><td>0311 7654321</td><td><span class="badge badge-female">Female</span></td><td><span class="badge badge-success">Active</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar">HR</div><div class="student-name"><strong>Hamza Raza</strong><span>Student #00126</span></div></div></td><td>hamza@example.com</td><td>0322 4567890</td><td><span class="badge badge-male">Male</span></td><td><span class="badge badge-success">Active</span></td></tr>
+            <tr><td><div class="student-cell"><div class="student-avatar">MA</div><div class="student-name"><strong>Maham Asif</strong><span>Student #00125</span></div></div></td><td>maham@example.com</td><td>0333 9876543</td><td><span class="badge badge-female">Female</span></td><td><span class="badge badge-warning">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head"><h3>Recent Activity</h3><span>Today</span></div>
+      <div class="card-body">
+        <div class="activity">
+          <div class="activity-item"><div class="activity-dot"></div><div class="activity-text"><strong>Ahmed Khan</strong> was added as a new student.<span>10 minutes ago</span></div></div>
+          <div class="activity-item"><div class="activity-dot"></div><div class="activity-text"><strong>Sara Ali</strong> profile was updated.<span>35 minutes ago</span></div></div>
+          <div class="activity-item"><div class="activity-dot"></div><div class="activity-text"><strong>Hamza Raza</strong> profile picture was changed.<span>1 hour ago</span></div></div>
+          <div class="activity-item"><div class="activity-dot"></div><div class="activity-text"><strong>Maham Asif</strong> was registered.<span>2 hours ago</span></div></div>
         </div>
-        <div class="w-[100%] bg-amber-200 h-15"></div>
-        <div class="w-[100%] bg-amber-100 h-15 absolute bottom-0"></div>
-      </aside>
-      <main></main>
-    </div>
-  </body>
+      </div>
+    </section>
+  </div>
+</section>
+</main>
+</div>
+</body>
 </html>
